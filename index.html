@@ -122,7 +122,7 @@ html[dir="rtl"] .dots { -webkit-mask-image: radial-gradient(ellipse 60% 70% at 2
 .hero-wrap { position: relative; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; width: 100%; min-height: 100svh; }
 .hero-text { align-self: center; padding-block: 96px; position: relative; z-index: 2; }
 .hello { color: var(--accent); font-size: 18px; font-weight: 700; margin: 0 0 4px; }
-.hero h1 { font-size: clamp(46px, 6.4vw, 96px); line-height: 1; font-weight: 800; margin: 0 0 18px; letter-spacing: -0.035em; background: linear-gradient(180deg, #FFFFFF 30%, #B9BFCA 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero h1 { font-size: clamp(46px, 6.4vw, 96px); line-height: 1; font-weight: 800; margin: 0 0 18px; letter-spacing: -0.035em; background: linear-gradient(180deg, #FFFFFF 30%, #B9BFCA 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.08em; }
 html[lang="ar"] .hero h1 { letter-spacing: 0; line-height: 1.25; }
 .role { font-size: clamp(18px, 1.9vw, 23px); font-weight: 700; margin: 0 0 10px; max-width: 34ch; }
 .typer { font-size: clamp(18px, 1.9vw, 23px); font-weight: 700; color: var(--muted); margin: 0 0 18px; min-height: 1.6em; }
@@ -143,7 +143,7 @@ html[lang="ar"] .hero h1 { letter-spacing: 0; line-height: 1.25; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .person { position: relative; z-index: 1; height: 100%; width: auto; max-width: none; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 98%); mask-image: linear-gradient(to bottom, #000 72%, transparent 98%); filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55)); animation: rise 1s cubic-bezier(.2,.7,.2,1) .2s both; }
 @keyframes rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
-.badge { position: absolute; z-index: 2; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px; background: rgba(21, 24, 31, 0.88); border: 1px solid var(--line); font-weight: 700; font-size: 14px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.7); animation: float 6s ease-in-out infinite; direction: ltr; }
+.badge { position: absolute; z-index: 2; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px; background: rgba(21, 24, 31, 0.88); border: 1px solid var(--line); font-weight: 700; font-size: 14px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.7); animation: float 6s ease-in-out infinite; }
 .badge i { width: 9px; height: 9px; border-radius: 3px; }
 .b1 { top: 20%; inset-inline-start: 2%; }
 .b2 { top: 34%; inset-inline-end: 0; animation-delay: -1.5s; }
@@ -153,7 +153,8 @@ html[lang="ar"] .hero h1 { letter-spacing: 0; line-height: 1.25; }
 .exp-card { position: absolute; z-index: 2; bottom: 14%; inset-inline-end: 0; display: flex; align-items: center; gap: 12px; background: rgba(21, 24, 31, 0.9); border: 1px solid var(--line); border-radius: 18px; padding: 14px 18px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7); }
 .exp-card b { font-size: 40px; line-height: 1; font-weight: 800; direction: ltr; }
 .exp-card b em { font-style: normal; color: var(--accent); }
-.exp-card span { font-size: 14px; font-weight: 700; color: var(--muted); max-width: 9ch; line-height: 1.3; }
+.exp-card span { font-size: 14px; font-weight: 700; color: var(--muted); max-width: 11ch; line-height: 1.3; }
+html[lang="ar"] .exp-card span { white-space: nowrap; max-width: none; }
 
 .anim { opacity: 0; transform: translateY(16px); animation: up 0.8s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d); }
 @keyframes up { to { opacity: 1; transform: none; } }
@@ -286,11 +287,21 @@ footer .container { display: flex; justify-content: space-between; flex-wrap: wr
   section { padding: 72px 0; }
   .hero { min-height: auto; }
   .hero-wrap { grid-template-columns: 1fr; min-height: auto; gap: 0; }
-  .hero-visual { order: -1; height: 440px; margin-top: 12px; }
+  .hero-visual { order: -1; height: 380px; margin-top: 8px; }
+  .glow { width: 300px; bottom: 26%; }
+  .ring { width: 270px; bottom: 30%; }
+  .ring.r2 { width: 350px; bottom: 20%; }
+  .badge { padding: 7px 11px; font-size: 13px; }
+  .b4 { top: 6%; inset-inline-end: 8%; }
+  .b1 { top: 20%; inset-inline-start: 3%; }
+  .b2 { top: 34%; inset-inline-end: 1%; }
+  .b3 { top: 50%; inset-inline-start: 1%; }
+  .b6 { top: 56%; inset-inline-end: 0; }
+  .b5 { top: 70%; inset-inline-start: 7%; }
   .person { -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 96%); mask-image: linear-gradient(to bottom, #000 60%, transparent 96%); }
-  .b1 { inset-inline-start: 4%; } .b3 { inset-inline-start: 2%; top: 58%; }
-  .exp-card { bottom: 10%; inset-inline-end: 2%; padding: 10px 14px; }
-  .exp-card b { font-size: 30px; }
+  .exp-card { bottom: 6%; inset-inline-end: 2%; padding: 9px 13px; gap: 10px; }
+  .exp-card b { font-size: 26px; }
+  .exp-card span { font-size: 12.5px; }
   .hero-text { padding-block: 8px 48px; }
   .dots { -webkit-mask-image: radial-gradient(ellipse 80% 40% at 50% 25%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 80% 40% at 50% 25%, #000 20%, transparent 75%); }
   .scroll { display: none; }
@@ -647,7 +658,7 @@ footer .container { display: flex; justify-content: space-between; flex-wrap: wr
     },
     ar: {
       title: "ماجد محمد | مطوّر Full Stack",
-      name: "ماجد محمد", who: "مطوّر Full Stack", hello: "مرحبًا، أنا", iBuild: "أبني", role: "مطوّر Full Stack متخصص في Laravel و Vue",
+      name: "ماجد محمد", who: "مطوّر Full Stack", hello: "مرحبًا، أنا", iBuild: "أبني", role: "مطوّر Full Stack متخصص في Laravel و Vue",
       nHome: "الرئيسية", nServices: "الخدمات", nSkills: "المهارات", nProjects: "الأعمال", nExp: "الخبرة", nContact: "تواصل",
       avail: "متاح لمشاريع العمل الحر",
       heroLead: "أنظمة ويب متكاملة من قاعدة البيانات حتى الواجهة، مبنية على مبادئ SOLID وسير عمل معزز بالذكاء الاصطناعي أديره وأراجعه.",
